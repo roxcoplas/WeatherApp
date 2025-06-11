@@ -1,1 +1,9 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-custom navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img src="cloud.png" alt="cloud" style="height: 50px;">
+    <span>Weather Forecast</span>
+    @if (showLogoutBtn()) {
+        <button type="button" class="btn btn-primary" (click)="logout()">Logout</button>
+    }
+  </div>
+</nav>
