@@ -1,1 +1,41 @@
-<p>weather works!</p>
+<div *ngIf="latestWeather && !loading" class="container-fluid">
+  <div class="card mt-4">
+    <div class="card-body">
+      <h4 class="card-title">Weather for {{ city }}</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Date (mm/dd/yyyy)</th>
+            <th scope="col">Temp (F)</th>
+            <th scope="col" class="mobile-hidden">Description</th>
+            <th scope="col" class="mobile-hidden">Main</th>
+            <th scope="col" class="mobile-hidden">Pressure</th>
+            <th scope="col" class="mobile-hidden">Humidity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ latestWeather.formattedDate }}</td>
+            <td>{{ latestWeather.main.temp }}</td>
+            <td class="mobile-hidden">{{ latestWeather.weather[0].description }}</td>
+            <td class="mobile-hidden">{{ latestWeather.weather[0].main }}</td>
+            <td class="mobile-hidden">{{ latestWeather.main.pressure }}</td>
+            <td class="mobile-hidden">{{ latestWeather.main.humidity }}%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <button class="btn mt-4" (click)="viewHome()">Back to Home</button>
+</div>
+
+<div *ngIf="loading" class="text-center mt-4">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <p class="mt-2">Loading weather data...</p>
+</div>
+
+<div *ngIf="!latestWeather && !loading" class="alert alert-warning mt-4">
+  No weather data available for {{ city }}
+</div>

@@ -15,12 +15,33 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 92%;
+    height: 100%;
 }
 
-.form-group input {
+.city-input{
     width: 500px;
     border-radius: 30px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
     height: 40px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 15px;
+    }
+    
+    .user-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .city-input {
+        width: 300px;
+        border-radius: 25px;
+    }
+    
+    .btn {
+        width: 180px;
+    }
 }

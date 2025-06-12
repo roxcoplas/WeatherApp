@@ -18,9 +18,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 92%;
+    height: 100%;
 }
 
-p {
+.message {
     font-size: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .btn {
+        font-size: 18px;
+        width: 120px;
+        padding: 6px 12px;
+    }
+
+    .message {
+        font-size: 18px;
+        text-align: justify;
+        padding: 10px;
+    }
 }

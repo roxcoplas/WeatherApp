@@ -1,0 +1,43 @@
+.btn {
+    background-color: #FFD69E;
+    border-radius: 25px;
+    width: 200px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #FF8585;
+    }
+}
+
+table>thead>tr>th{
+    background-color: #FF8585;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none;
+  }
+  
+  .date-col, .temp-col {
+    font-weight: bold;
+  }
+  
+  .weather-table th, 
+  .weather-table td {
+    padding: 8px 10px;
+  }
+  
+  .btn {
+    width: 150px;
+    height: 36px;
+    font-size: 14px;
+  }
+  
+  .container-fluid {
+    margin-top: 70px;
+    height: calc(100vh - 80px);
+    padding: 10px;
+  }
+}

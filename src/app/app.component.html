@@ -1,2 +1,15 @@
-<app-navbar/>
+<nav class="navbar navbar-custom navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <div class="d-flex align-items-center">
+      <img src="cloud.png" alt="cloud" style="height: 50px;" class="me-3">
+      <span class="navbar-brand d-none d-lg-inline">Weather Forecast</span>
+    </div>
+    
+    @if (showLogoutBtn()) {
+      <div class="d-flex">
+        <button type="button" class="btn" (click)="logout()">Logout</button>
+      </div>
+    }
+  </div>
+</nav>
 <router-outlet/>
