@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,9 @@ export class AppComponent {
     { initialValue: false }
   );
 
+  constructor(public auth: AuthService){}
+
   logout() {
-    this.router.navigate(['/landing']);
+    this.auth.logout({ logoutParams: { returnTo: window.location.origin } });
   }
 }

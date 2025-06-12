@@ -1,5 +1,8 @@
 <div class="container-fluid">
-    <h3 class="user-title">Welcome,</h3>
+    <h3 class="user-title">Welcome, {{ userName }}!</h3>
+    <p>
+        GitHub: <a [href]="userGithubUrl" target="_blank">{{ userGithubUrl }}</a>
+    </p>
     <div class="form-group">
         <input type="text" [formControl]="cityControl" placeholder="Enter city" class="form-control mb-2 city-input" />
     </div>
