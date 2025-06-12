@@ -1,0 +1,26 @@
+.btn {
+    background-color: #FFD69E;
+    border-radius: 25px;
+    width: 200px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #FF8585;
+    }
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 92%;
+}
+
+.form-group input {
+    width: 500px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+    height: 40px;
+}
